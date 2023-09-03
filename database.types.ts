@@ -34,20 +34,123 @@ export interface Database {
   }
   public: {
     Tables: {
+      attribute_options: {
+        Row: {
+          attribute_id: number
+          created_at: string
+          id: number
+          user_id: string
+          value: string
+        }
+        Insert: {
+          attribute_id: number
+          created_at?: string
+          id?: number
+          user_id?: string
+          value: string
+        }
+        Update: {
+          attribute_id?: number
+          created_at?: string
+          id?: number
+          user_id?: string
+          value?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "attribute_options_attribute_id_fkey"
+            columns: ["attribute_id"]
+            referencedRelation: "attributes"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "attribute_options_user_id_fkey"
+            columns: ["user_id"]
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
+      attributes: {
+        Row: {
+          created_at: string
+          id: number
+          title: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: number
+          title: string
+          user_id?: string
+        }
+        Update: {
+          created_at?: string
+          id?: number
+          title?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "attributes_user_id_fkey"
+            columns: ["user_id"]
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
+      cloth_attribute_options: {
+        Row: {
+          attribute_option_id: number
+          cloth_id: number
+        }
+        Insert: {
+          attribute_option_id: number
+          cloth_id: number
+        }
+        Update: {
+          attribute_option_id?: number
+          cloth_id?: number
+        }
+        Relationships: [
+          {
+            foreignKeyName: "cloth_attribute_options_attribute_option_id_fkey"
+            columns: ["attribute_option_id"]
+            referencedRelation: "attribute_options"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "cloth_attribute_options_cloth_id_fkey"
+            columns: ["cloth_id"]
+            referencedRelation: "clothes"
+            referencedColumns: ["id"]
+          }
+        ]
+      }
       clothes: {
         Row: {
           id: number
-          name: string
+          picture_url: string
+          user_id: string
         }
         Insert: {
           id?: number
-          name: string
+          picture_url: string
+          user_id?: string
         }
         Update: {
           id?: number
-          name?: string
+          picture_url?: string
+          user_id?: string
         }
-        Relationships: []
+        Relationships: [
+          {
+            foreignKeyName: "clothes_user_id_fkey"
+            columns: ["user_id"]
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          }
+        ]
       }
     }
     Views: {
