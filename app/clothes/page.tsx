@@ -24,7 +24,7 @@ export default async function Index() {
         const parsed = schema.parse({
             name: formData.get('name'),
         })
-        await supabase.from('clothes').insert(parsed)
+        // await supabase.from('clothes').insert(parsed)
         revalidatePath('/')
     }
 
@@ -49,9 +49,9 @@ export default async function Index() {
                 </div>
             </form>
             <ul className="text-foreground">
-                {clothes?.map((cloth) => (
-                    <li key={cloth.id}>{cloth.id} {cloth.name} </li>
-                ))}
+                {/*{clothes?.map((cloth) => (*/}
+                {/*    <li key={cloth.id}>{cloth.id} {cloth.name} </li>*/}
+                {/*))}*/}
             </ul>
         </div>
     )
