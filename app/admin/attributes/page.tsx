@@ -45,7 +45,7 @@ export default async function AttributeManagement() {
 
 
     return (
-        <>
+        <div className="flex flex-col items-start">
             <form action={createAttribute}>
                 <div className="flex gap-4 items-center my-4">
                     <Input type="text" name="title" placeholder="New attribute"/>
@@ -72,7 +72,7 @@ export default async function AttributeManagement() {
                     </li>
                 ))}
             </ul>
-        </>
+        </div>
     )
 
 }

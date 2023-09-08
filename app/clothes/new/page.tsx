@@ -77,7 +77,10 @@ export default function NewClothing({searchParams}: {
     return (
         <>
             {imageUrl &&
-                <Image src={imageUrl} alt="Clothing item" width={500} height={500} className="rounded-md"/>}
+            <div className="flex justify-center md:justify-start">
+                <img src={imageUrl} alt="Clothing item" className="rounded-md object-contain h-auto w-[90vw] md:h-[50vh] md:w-auto"/>
+            </div>
+            }
             {allAttributes?.map((attribute) => (
                 <div className="mt-4" key={attribute.id}>
                     <h2>{attribute.title}</h2>

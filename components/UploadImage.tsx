@@ -4,6 +4,7 @@ import {createClientComponentClient} from "@supabase/auth-helpers-nextjs";
 import {Database} from "@/database.types";
 import {PlusIcon} from "@heroicons/react/20/solid";
 import {useRouter} from "next/navigation";
+import {Button} from "@/components/ui/button";
 
 export default function UploadImage({userId}: {
     userId: string
@@ -36,11 +37,11 @@ export default function UploadImage({userId}: {
     }
     return (
         <>
-            <label htmlFor="file"
-                   className="inline-flex items-center gap-x-1.5 rounded-md bg-pink-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600">
-                <PlusIcon className="-ml-0.5 h-5 w-5"></PlusIcon>
-                {uploading ? 'Uploading...' : 'Add clothing item'}
-            </label>
+            <Button asChild>
+                <label htmlFor="file">
+                {uploading ? 'Uploading...' : 'Add clothing item'} </label>
+            </Button>
+
             <input
                 className="hidden absolute"
                 type="file"
