@@ -5,6 +5,7 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {z} from "zod";
 import {revalidatePath} from "next/cache";
+import NavBar from "@/components/NavBar";
 
 export default async function AttributeManagement() {
     const supabase = createServerComponentClient<Database>({cookies})
@@ -44,7 +45,8 @@ export default async function AttributeManagement() {
     }
 
 
-    return (
+    return (<>
+            <NavBar/>
         <div className="flex flex-col items-start">
             <form action={createAttribute}>
                 <div className="flex gap-4 items-center my-4">
@@ -73,6 +75,7 @@ export default async function AttributeManagement() {
                 ))}
             </ul>
         </div>
+        </>
     )
 
 }

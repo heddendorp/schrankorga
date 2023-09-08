@@ -7,6 +7,7 @@ import NextJsLogo from '../components/NextJsLogo'
 import UploadImage from "@/components/UploadImage";
 import {Database} from "@/database.types";
 import {redirect} from "next/navigation";
+import NavBar from "@/components/NavBar";
 
 export const dynamic = 'force-dynamic'
 
@@ -16,13 +17,12 @@ export default async function Index() {
   if (!session) {
     redirect('/login')
   }
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
 
-  return (
+  return (<>
+    <NavBar/>
     <div className="w-full flex flex-col items-center">
       <UploadImage userId={session?.user?.id}/>
     </div>
+    </>
   )
 }

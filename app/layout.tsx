@@ -15,31 +15,10 @@ export default async function RootLayout({
                                          }: {
     children: React.ReactNode
 }) {
-    const supabase = createServerComponentClient<Database>({cookies})
-
-    const {
-        data: {user},
-    } = await supabase.auth.getUser()
 
     return (<html lang="en">
     <body>
-    <nav className="w-full flex border-b border-b-foreground/10 h-16">
-        <div className="w-full flex justify-between  items-center p-3 text-sm text-foreground">
-            <div className={"flex gap-8"}>
-            <Link className="flex items-center" href="/"><HomeIcon className={"w-6 text-primary"}/>Home</Link>
-            <Link className="flex items-center" href="/admin/attributes"><RocketLaunchIcon className={"w-6 text-primary"}/>Admin</Link>
-            </div>
 
-            {user ? (<div className="flex items-center gap-4">
-                <LogoutButton/>
-            </div>) : (<Link
-                href="/login"
-                className="py-2 px-4 rounded-md no-underline bg-btn-background hover:bg-btn-background-hover"
-            >
-                Login
-            </Link>)}
-        </div>
-    </nav>
     <main className="min-h-screen bg-background flex flex-col p-4">
         {children}
     </main>

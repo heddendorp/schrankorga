@@ -3,6 +3,7 @@ import {createClientComponentClient} from "@supabase/auth-helpers-nextjs";
 import {Database} from "@/database.types";
 import React from "react";
 import {Button} from "@/components/ui/button";
+import NavBar from "@/components/NavBar";
 
 export default function NewClothing({searchParams}: {
     searchParams: {
@@ -89,6 +90,7 @@ export default function NewClothing({searchParams}: {
     }
 
     return (<>
+            <NavBar/>
             {imageUrl && <div className="flex justify-center md:justify-start">
                 <img src={imageUrl} alt="Clothing item"
                      className="rounded-md object-contain h-auto w-[90vw] md:h-[50vh] md:w-auto"/>
