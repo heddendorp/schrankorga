@@ -26,7 +26,7 @@ export default async function Index() {
     <div className="w-full flex flex-col items-center">
       <UploadImage userId={session?.user?.id}/>
     </div>
-    <div className={"grid grid-cols-2 md:grid-cols-4 gap-4 mt-4"}>
+    <div className={"grid grid-cols-2 md:grid-cols-6 gap-4 mt-4"}>
       {allClothes?.map((item) => (
          <Link href={"/clothes/"+item.id}> <ClothingImage imagePath={item.picture_url} key={item.id}/></Link>
           ))}
