@@ -22,7 +22,7 @@ export default function () {
     },[supabase])
 
     return (
-        <nav className="w-full flex border-b border-b-foreground/10 h-16">
+        <nav className="w-full flex border-b border-b-foreground/10 h-16 mb-4">
             <div className="w-full flex justify-between  items-center p-3 text-sm text-foreground">
                 <div className={"flex gap-8"}>
                     <Link className="flex items-center" href="/"><HomeIcon className={"w-6 text-primary"}/>Home</Link>

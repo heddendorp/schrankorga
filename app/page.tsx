@@ -8,6 +8,7 @@ import UploadImage from "@/components/UploadImage";
 import {Database} from "@/database.types";
 import {redirect} from "next/navigation";
 import NavBar from "@/components/NavBar";
+import ClothingImage from "@/components/ClothingImage";
 
 export const dynamic = 'force-dynamic'
 
@@ -17,11 +18,18 @@ export default async function Index() {
   if (!session) {
     redirect('/login')
   }
+  const {data: allClothes} = await supabase.from('clothes').select(
+      `picture_url, id`)
 
   return (<>
     <NavBar/>
     <div className="w-full flex flex-col items-center">
       <UploadImage userId={session?.user?.id}/>
+    </div>
+    <div>
+      {allClothes?.map((item) => (
+         <Link href={"/clothes/"+item.id}> <ClothingImage imagePath={item.picture_url} key={item.id}/></Link>
+          ))}
     </div>
     </>
   )

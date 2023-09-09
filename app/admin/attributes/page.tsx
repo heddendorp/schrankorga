@@ -6,6 +6,8 @@ import {Input} from "@/components/ui/input";
 import {z} from "zod";
 import {revalidatePath} from "next/cache";
 import NavBar from "@/components/NavBar";
+import {Trash} from "lucide-react";
+import {XMarkIcon} from "@heroicons/react/20/solid";
 
 export default async function AttributeManagement() {
     const supabase = createServerComponentClient<Database>({cookies})
@@ -29,6 +31,19 @@ export default async function AttributeManagement() {
         revalidatePath('/')
     }
 
+    async function deleteAttribute(formData: FormData) {
+        'use server'
+        const schema = z.object({
+            id: z.string().min(1).max(255)
+        })
+        const parsed = schema.parse({
+            id: formData.get('id'),
+        })
+        const supabase = createServerComponentClient<Database>({cookies})
+        await supabase.from('attributes').delete().eq('id', parsed.id)
+        revalidatePath('/')
+    }
+
     async function createAttributeValue(formData: FormData) {
         'use server'
         const schema = z.object({
@@ -44,9 +59,21 @@ export default async function AttributeManagement() {
         revalidatePath('/')
     }
 
+    async function deleteAttributeValue(formData: FormData) {
+        'use server'
+        const schema = z.object({
+            id: z.string().min(1).max(255)
+        })
+        const parsed = schema.parse({
+            id: formData.get('id'),
+        })
+        const supabase = createServerComponentClient<Database>({cookies})
+        await supabase.from('attribute_options').delete().eq('id', parsed.id)
+        revalidatePath('/')
+    }
 
     return (<>
-            <NavBar/>
+        <NavBar/>
         <div className="flex flex-col items-start">
             <form action={createAttribute}>
                 <div className="flex gap-4 items-center my-4">
@@ -56,11 +83,27 @@ export default async function AttributeManagement() {
             </form>
             <ul className="text-foreground">
                 {allAttributes?.map((attribute) => (
-                    <li key={attribute.id}> {attribute.title} <br/>
+                    <li key={attribute.id}>
+                        <div className={"flex items-center gap-2"}>{attribute.title}
+                            <form action={deleteAttribute}>
+                                <div>
+                                    <Input type="hidden" name="id" value={attribute.id}/>
+                                    <button type="submit" className={"text-destructive"}><Trash/></button>
+                                </div>
+                            </form>
+                        </div>
+                        <br/>
                         <ul className="list-disc list-inside text-sm">
                             {attribute.attribute_options?.map((option) => (
-                                <li key={option.id}>{option.value}</li>
-                            ))}
+                                <li className={"flex items-center gap-2"} key={option.id}>- {option.value}
+                                        <form action={deleteAttributeValue}>
+
+                                                <Input type="hidden" name="id" value={option.id}/>
+                                                <button type="submit" className={"text-destructive"}><XMarkIcon className={'w-6'}/></button>
+
+                                        </form>
+                                </li>
+                                ))}
                             <li className="list-none">
                                 <form action={createAttributeValue}>
                                     <div className="flex gap-4 items-center mt-2 mb-6">
@@ -72,10 +115,10 @@ export default async function AttributeManagement() {
                             </li>
                         </ul>
                     </li>
-                ))}
+                    ))}
             </ul>
         </div>
-        </>
-    )
+    </>
+)
 
 }
