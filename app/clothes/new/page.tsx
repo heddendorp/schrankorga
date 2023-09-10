@@ -71,6 +71,7 @@ export default function NewClothing({searchParams}: {
 
     const saveClothes = async () => {
         const imagePath = searchParams.imagePath
+        console.log(searchParams)
         if (!imagePath || typeof imagePath !== 'string') {
             throw new Error('No image path')
         }
