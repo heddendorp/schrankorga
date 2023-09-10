@@ -5,6 +5,7 @@ import React from "react";
 import {Button} from "@/components/ui/button";
 import NavBar from "@/components/NavBar";
 
+export const dynamic='force-dynamic';
 export default function NewClothing({searchParams}: {
     searchParams: {
         [key: string]: string | string[] | undefined
@@ -52,8 +53,6 @@ export default function NewClothing({searchParams}: {
         }
 
         const imagePath = searchParams.imagePath
-        console.dir(searchParams)
-        console.log(Object.entries(searchParams))
         if (!imagePath || typeof imagePath !== 'string') {
             throw new Error('No image path')
         }
@@ -73,7 +72,6 @@ export default function NewClothing({searchParams}: {
 
     const saveClothes = async () => {
         const imagePath = searchParams.imagePath
-        console.log(searchParams)
         if (!imagePath || typeof imagePath !== 'string') {
             throw new Error('No image path')
         }
