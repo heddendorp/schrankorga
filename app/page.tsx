@@ -7,6 +7,8 @@ import NextJsLogo from '../components/NextJsLogo'
 import UploadImage from "@/components/UploadImage";
 import {Database} from "@/database.types";
 import {redirect} from "next/navigation";
+import NavBar from "@/components/NavBar";
+import ClothingImage from "@/components/ClothingImage";
 
 export const dynamic = 'force-dynamic'
 
@@ -16,32 +18,19 @@ export default async function Index() {
   if (!session) {
     redirect('/login')
   }
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const {data: allClothes} = await supabase.from('clothes').select(
+      `picture_url, id`)
 
-  return (
+  return (<>
+    <NavBar/>
     <div className="w-full flex flex-col items-center">
-      <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
-        <div className="w-full max-w-4xl flex justify-between items-center p-3 text-sm text-foreground">
-          <div />
-          <div>
-            {user ? (
-              <div className="flex items-center gap-4">
-                <LogoutButton />
-              </div>
-            ) : (
-              <Link
-                href="/login"
-                className="py-2 px-4 rounded-md no-underline bg-btn-background hover:bg-btn-background-hover"
-              >
-                Login
-              </Link>
-            )}
-          </div>
-        </div>
-      </nav>
       <UploadImage userId={session?.user?.id}/>
     </div>
+    <div className={"grid grid-cols-2 md:grid-cols-6 gap-4 mt-4"}>
+      {allClothes?.map((item) => (
+         <Link href={"/clothes/"+item.id}> <ClothingImage imagePath={item.picture_url} key={item.id}/></Link>
+          ))}
+    </div>
+    </>
   )
 }
