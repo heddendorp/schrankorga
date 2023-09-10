@@ -53,6 +53,7 @@ export default function NewClothing({searchParams}: {
         }
 
         const imagePath = searchParams.imagePath
+        console.log(Object.entries(searchParams))
         if (!imagePath || typeof imagePath !== 'string') {
             throw new Error('No image path')
         }
