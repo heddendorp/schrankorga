@@ -1,18 +1,27 @@
-# Schrank orga 🐸🐸
-<p align="center">
-<img width="94" height="94" src="https://img.icons8.com/3d-fluency/188/sliding-door-closet.png" alt="sliding-door-closet" style="align:center"/>
-</p>
-The ultimate tool to keep an overview of what's in your closet.
+# Schrankorga
 
-## Documentation resources
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
 
- - **WebStorm**: The tool for writing code   
-   Get student license at https://www.jetbrains.com/shop/eform/students
- - **Supabase**: The database we are using   
-   https://supabase.com/docs/reference/javascript/select
- - **Next.js**: How pages are created and changed   
-   https://nextjs.org/docs
- - **shacdn/ui**: how to get new components   
-   https://ui.shadcn.com/docs/components/accordion
- - **Tailwind.css**: Change the style of things like abstand and font size   
-   https://tailwindcss.com/docs/font-size
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
