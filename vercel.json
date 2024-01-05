@@ -1,8 +1,6 @@
 {
   "framework": "angular",
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/api" }
-  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
   "functions": {
     "api/index.mjs": {
       "includeFiles": "dist/schrankorga/browser/**"
