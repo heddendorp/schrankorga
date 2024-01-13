@@ -2,7 +2,9 @@
 // For more information: https://material.angular.io/guide/theming
 @use "@angular/material" as mat;
 // Plus imports for other components in your app.
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
@@ -39,8 +41,28 @@ $schrankorga-theme: mat.define-light-theme(
 html,
 body {
   height: 100%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+// Style to fix the weird border with angular material
+.mdc-notched-outline__notch {
+  border-right: none !important;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-bold;
+  }
 }

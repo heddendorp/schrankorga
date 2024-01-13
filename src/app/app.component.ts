@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
+import { SupabaseService } from './core/services/supabase.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,15 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
-  title = 'schrankorga';
+export class AppComponent implements OnInit {
+  private supabase = inject(SupabaseService);
+  private router = inject(Router);
+  async ngOnInit() {
+    const session = await this.supabase.getSession();
+    if (session) {
+      void this.router.navigate(['/collections']);
+    } else {
+      void this.router.navigate(['/login']);
+    }
+  }
 }
