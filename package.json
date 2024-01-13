@@ -10,7 +10,7 @@
     "serve:ssr:schrankorga": "node dist/schrankorga/server/server.mjs",
     "lint": "ng lint",
     "format": "prettier --write .",
-    "generate": "supabase gen types typescript --linked > src/app/generated/database.types.ts"
+    "generate": "npx -y supabase gen types typescript --linked > src/app/generated/database.types.ts"
   },
   "private": true,
   "dependencies": {

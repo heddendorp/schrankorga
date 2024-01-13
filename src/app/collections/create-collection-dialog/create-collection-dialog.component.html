@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>Add new collection</h1>
+<mat-dialog-content>
+  <form class="flex flex-col" [formGroup]="collectionDialogForm">
+    <mat-form-field class="mt-2">
+      <mat-label>Collection name</mat-label>
+      <input matInput formControlName="name" type="text" />
+    </mat-form-field>
+    <app-image-upload (imageUploaded)="updateImage($event)"></app-image-upload>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-flat-button mat-dialog-close>Cancel</button>
+  <button
+    mat-flat-button
+    color="primary"
+    [mat-dialog-close]="collectionDialogForm.value"
+    [disabled]="collectionDialogForm.invalid"
+  >
+    Create
+  </button>
+</mat-dialog-actions>

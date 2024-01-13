@@ -1,30 +1,16 @@
-<main class="p-4 border rounded bg-white items-center m-10">
+<main class="p-4 border rounded bg-white m-10">
   <h1 class="text-4xl mb-6 font-bold">My collections</h1>
-  <div
-    class="p-4 grid grid-cols-3 gap-4 items-center justify-between max-w-full"
-  >
-    <div>
-      <h2 class="text-pink-600">cute toad</h2>
-      <img
-        class="w-full"
-        src="https://www.nabu.de/imperia/md/nabu/images/arten/tiere/lurche/kroeten/211125-nabu-wechselkroete-christian-stepf.jpeg"
-      />
-    </div>
-
-    <div>
-      <h2 class="text-pink-600">couple toads</h2>
-      <img
-        class="w-full"
-        src="https://static.bnn.de/nachrichten/baden-wuerttemberg/urn-newsml-dpacom-20090101-230218-99-642541-ch00h4/alternates/LANDSCAPE_16x9_BASE/urn-newsml-dpacom-20090101-230218-99-642541"
-      />
-    </div>
-
-    <div>
-      <h2 class="text-pink-600">another cute toad</h2>
-      <img
-        class="w-full"
-        src="https://img.freepik.com/fotos-kostenlos/giftige-kroete-die-aus-der-naehe-in-die-natur-starrt-erzeugt-von-ki_188544-34718.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1704672000&semt=sph"
-      />
-    </div>
+  <button (click)="createCollection()" mat-flat-button color="primary">
+    <mat-icon>add</mat-icon> Add collection
+  </button>
+  <div class="p-4 grid grid-cols-3 gap-4 max-w-full">
+    @for (collection of collections(); track collection.id) {
+      <div>
+        <h3>{{ collection.name }}</h3>
+        @if (collection.image) {
+          <app-image-download [image]="collection.image"></app-image-download>
+        }
+      </div>
+    }
   </div>
 </main>
