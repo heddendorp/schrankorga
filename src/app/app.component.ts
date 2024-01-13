@@ -14,8 +14,8 @@ export class AppComponent implements OnInit {
   private supabase = inject(SupabaseService);
   private router = inject(Router);
   async ngOnInit() {
-    const session = await this.supabase.getSession();
-    if (session) {
+    const { data, error } = await this.supabase.getSession();
+    if (data.session) {
       void this.router.navigate(['/collections']);
     } else {
       void this.router.navigate(['/login']);
