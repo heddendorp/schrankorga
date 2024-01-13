@@ -14,6 +14,7 @@
     "@angular/platform-server": "^17.0.0",
     "@angular/router": "^17.0.0",
     "@angular/ssr": "^17.0.9",
+    "@supabase/supabase-js": "^2.39.2",
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -58,19 +59,19 @@
       },
       {
         "file": ".nx/cache/file-map.json",
-        "hash": "2499101649649836386"
+        "hash": "7032858744226364808"
       },
       {
         "file": ".nx/cache/lockfile.hash",
-        "hash": "1790192068161321618"
+        "hash": "12446703552008219920"
       },
       {
         "file": ".nx/cache/parsed-lock-file.json",
-        "hash": "594970993210156244"
+        "hash": "16781487239183136224"
       },
       {
         "file": ".nx/cache/project-graph.json",
-        "hash": "977310602035747765"
+        "hash": "5848513988112039594"
       },
       {
         "file": ".prettierignore",
@@ -90,7 +91,7 @@
       },
       {
         "file": ".yarn/install-state.gz",
-        "hash": "13326430208539334066"
+        "hash": "2213761435254120562"
       },
       {
         "file": ".yarn/releases/yarn-4.0.2.cjs",
@@ -114,7 +115,7 @@
       },
       {
         "file": "package.json",
-        "hash": "6068064635051368487"
+        "hash": "15936233827666004392"
       },
       {
         "file": "server.ts",
@@ -181,6 +182,10 @@
         "hash": "3509426034073315881"
       },
       {
+        "file": "supabase/migrations/20240105221945_remote_schema.sql",
+        "hash": "7686877646267697347"
+      },
+      {
         "file": "supabase/seed.sql",
         "hash": "3244421341483603138"
       },
@@ -206,7 +211,7 @@
       },
       {
         "file": "yarn.lock",
-        "hash": "7413307146986927463"
+        "hash": "11644202605807243742"
       }
     ]
   }

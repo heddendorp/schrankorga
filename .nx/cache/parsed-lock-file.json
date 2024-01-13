@@ -2601,6 +2601,69 @@
         "hash": "b838ccccf74c36fa7d3ed89a7efb5858cba1a84db4d08250c2fc44d8235140f10d31875bde71517d8503cb3fb08fcd34d3b7a3d0d89058ca3f74f7c816f0fb9c"
       }
     },
+    "npm:@supabase/functions-js": {
+      "type": "npm",
+      "name": "npm:@supabase/functions-js",
+      "data": {
+        "version": "2.1.5",
+        "packageName": "@supabase/functions-js",
+        "hash": "f2af9f12c9ffa4460998c166d71184bb2fc7753f2063548d482a51db3178da24217cd9dea1be8803356c3fd743848fdfb1e1903d882aa90fa7a7ae0c5dc7d070"
+      }
+    },
+    "npm:@supabase/gotrue-js": {
+      "type": "npm",
+      "name": "npm:@supabase/gotrue-js",
+      "data": {
+        "version": "2.62.0",
+        "packageName": "@supabase/gotrue-js",
+        "hash": "f5c7d74f805b52f5914bc14a359c3164f2e9bfa4c07e178665668d8706e8eec8783b666c58491e241a970df103d005e9870b1cd5611030eb074175f634652b04"
+      }
+    },
+    "npm:@supabase/node-fetch": {
+      "type": "npm",
+      "name": "npm:@supabase/node-fetch",
+      "data": {
+        "version": "2.6.15",
+        "packageName": "@supabase/node-fetch",
+        "hash": "98d25cab2eba53c93c59e730d52d50065b1a7fe216c65224471e83e2064ebd45ae51ad09cb39ec263c3cb59e3d41870fc2e789ea2e9587480d7ba212b85daf38"
+      }
+    },
+    "npm:@supabase/postgrest-js": {
+      "type": "npm",
+      "name": "npm:@supabase/postgrest-js",
+      "data": {
+        "version": "1.9.1",
+        "packageName": "@supabase/postgrest-js",
+        "hash": "804177509bfd4ac249e9892c3526d8159c54dadbec7f2e6f2b85634e5b18f4eb08bfe82a0d999705cfe0cbc8b1a0c1fd9dcd5fa724e056b95f2dd1fdf1e2e091"
+      }
+    },
+    "npm:@supabase/realtime-js": {
+      "type": "npm",
+      "name": "npm:@supabase/realtime-js",
+      "data": {
+        "version": "2.9.1",
+        "packageName": "@supabase/realtime-js",
+        "hash": "f0d2ccb33b1f5f97de241dd7e24175b89b94c059ba9e0151bc58fcb54037fe91960a620724c176d5821deac1c11090b74d0d640e8bba4b8c0b895663cbbbdc5e"
+      }
+    },
+    "npm:@supabase/storage-js": {
+      "type": "npm",
+      "name": "npm:@supabase/storage-js",
+      "data": {
+        "version": "2.5.5",
+        "packageName": "@supabase/storage-js",
+        "hash": "5a81f0d21a1094187390d60d6d993b7fbcaef355611b3ec74fe6f333921703d6e7f7e8000c1e729b25fba11b91f6b40ffbff7c64af3b961403b50dc01808cbd1"
+      }
+    },
+    "npm:@supabase/supabase-js": {
+      "type": "npm",
+      "name": "npm:@supabase/supabase-js",
+      "data": {
+        "version": "2.39.2",
+        "packageName": "@supabase/supabase-js",
+        "hash": "c502ebd6b62b9a02e0abd4f5349906e70a19c35201d973ff1218e983ee92953bf5fe8689312f07f1a0a6a8d4e2a24d16f9604c277dfa6384aa1df86f46c02e8e"
+      }
+    },
     "npm:@tufjs/canonical-json": {
       "type": "npm",
       "name": "npm:@tufjs/canonical-json",
@@ -2788,6 +2851,15 @@
         "version": "18.19.4",
         "packageName": "@types/node",
         "hash": "e395bf591e79bd91c0819e7bee39c56e881399da2ca37fba5a59194ff28941fb8ed663c3fb4fba89465842720d916110dee9b774a3e4aecbe08b9e1ada4ab4fe"
+      }
+    },
+    "npm:@types/phoenix": {
+      "type": "npm",
+      "name": "npm:@types/phoenix",
+      "data": {
+        "version": "1.6.4",
+        "packageName": "@types/phoenix",
+        "hash": "b2094c2e3065ce02f755bf3c4fde433cd9313bc97a2e34521b98bcc074ff9fd50b5af127b67cb8833c3d8b778d0756d67a25913f368669317fed3bd68cf7e752"
       }
     },
     "npm:@types/qs": {
@@ -3294,9 +3366,9 @@
         "hash": "45d3a6f0b4f10b04fdd44bef62972e2470bfd917bf00439471fa7473d92d7cbe31369c73db863cc45dda115cb42527f39e232e9256115534b8ee5806b0caeed4"
       }
     },
-    "npm:ansi-regex@5.0.1": {
+    "npm:ansi-regex": {
       "type": "npm",
-      "name": "npm:ansi-regex@5.0.1",
+      "name": "npm:ansi-regex",
       "data": {
         "version": "5.0.1",
         "packageName": "ansi-regex",
@@ -5409,18 +5481,18 @@
         "hash": "d3c11aeea898eb83d5ec7a99508600fbe8f83d2cf00cbb77f873dbf2bcb39428eff1b538e4915c993d8a3b3473fa71eeebfe22c9bb3a3003d1e26b1f2c8a42cd"
       }
     },
-    "npm:globby": {
+    "npm:globby@11.1.0": {
       "type": "npm",
-      "name": "npm:globby",
+      "name": "npm:globby@11.1.0",
       "data": {
         "version": "11.1.0",
         "packageName": "globby",
         "hash": "b39511b4afe4bd8a7aead3a27c4ade2b9968649abab0a6c28b1a90141b96ca68ca5db1302f7c7bd29eab66bf51e13916b8e0a3d0ac08f75e1e84a39b35691189"
       }
     },
-    "npm:globby@13.2.2": {
+    "npm:globby": {
       "type": "npm",
-      "name": "npm:globby@13.2.2",
+      "name": "npm:globby",
       "data": {
         "version": "13.2.2",
         "packageName": "globby",
@@ -8469,18 +8541,18 @@
         "hash": "44e9ed0ea337f5bb37cf54b065789be4fba4c2f45aa5c1cd19c33eee7bc5683a24df67e45b46698c6192bdf13e85052251ea994c4873c6d86d21392e0cd45618"
       }
     },
-    "npm:slash": {
+    "npm:slash@3.0.0": {
       "type": "npm",
-      "name": "npm:slash",
+      "name": "npm:slash@3.0.0",
       "data": {
         "version": "3.0.0",
         "packageName": "slash",
         "hash": "e18488c6a42bdfd4ac5be85b2ced3ccd0224773baae6ad42cfbb9ec74fc07f9fa8396bd35ee638084ead7a2a0818eb5e7151111544d4731ce843019dab4be47b"
       }
     },
-    "npm:slash@4.0.0": {
+    "npm:slash": {
       "type": "npm",
-      "name": "npm:slash@4.0.0",
+      "name": "npm:slash",
       "data": {
         "version": "4.0.0",
         "packageName": "slash",
@@ -9045,6 +9117,15 @@
         "hash": "93937279934bd66cc3270016dd8d0afec14fb7c94a05c72dc57321f8bd1fa97e5bea6d1f7c89e728d077ca31ea125b78320a616a6c6cd0e6b9cb94cb864381c1"
       }
     },
+    "npm:tr46": {
+      "type": "npm",
+      "name": "npm:tr46",
+      "data": {
+        "version": "0.0.3",
+        "packageName": "tr46",
+        "hash": "047cb209a6b60c742f05c9d3ace8fa510bff609995c129a37ace03476a9b12db4dbf975e74600830ef0796e18882b2381fb5fb1f6b4f96b832c374de3ab91a11"
+      }
+    },
     "npm:tree-kill": {
       "type": "npm",
       "name": "npm:tree-kill",
@@ -9378,6 +9459,15 @@
         "hash": "5b61ca583a95e2dd85d7078400190efd452e05751a64accb8c06ce4db65d7e0b0cde9917d705e826a2e05cc2548f61efde115ffa374c3e436d04be45c889e5b4"
       }
     },
+    "npm:webidl-conversions": {
+      "type": "npm",
+      "name": "npm:webidl-conversions",
+      "data": {
+        "version": "3.0.1",
+        "packageName": "webidl-conversions",
+        "hash": "5612d5f3e54760a797052eb4927f0ddc01383550f542ccd33d5238cfd65aeed392a45ad38364970d0a0f4fea32e1f4d231b3d8dac4a3bdd385e5cf802ae097db"
+      }
+    },
     "npm:webpack-dev-middleware": {
       "type": "npm",
       "name": "npm:webpack-dev-middleware",
@@ -9457,6 +9547,15 @@
         "version": "0.1.4",
         "packageName": "websocket-extensions",
         "hash": "bbc8c233388a0eb8a40786ee2e30d35935cacbfe26ab188b3e020987e85d519c2009fe07cfc37b7f718b85afdba7e54654c9153e6697301f72561bfe429177e0"
+      }
+    },
+    "npm:whatwg-url": {
+      "type": "npm",
+      "name": "npm:whatwg-url",
+      "data": {
+        "version": "5.0.0",
+        "packageName": "whatwg-url",
+        "hash": "1588bed84d10b72d5eec1d0faa0722ba1962f1821e7539c535558fb5398d223b0c50d8acab950b8c488b4ba69043fd833cc2697056b167d8ad46fac3995a55d5"
       }
     },
     "npm:which@2.0.2": {
@@ -15109,6 +15208,76 @@
       "type": "static"
     },
     {
+      "source": "npm:@supabase/functions-js",
+      "target": "npm:@supabase/node-fetch",
+      "type": "static"
+    },
+    {
+      "source": "npm:@supabase/gotrue-js",
+      "target": "npm:@supabase/node-fetch",
+      "type": "static"
+    },
+    {
+      "source": "npm:@supabase/node-fetch",
+      "target": "npm:whatwg-url",
+      "type": "static"
+    },
+    {
+      "source": "npm:@supabase/postgrest-js",
+      "target": "npm:@supabase/node-fetch",
+      "type": "static"
+    },
+    {
+      "source": "npm:@supabase/realtime-js",
+      "target": "npm:@supabase/node-fetch",
+      "type": "static"
+    },
+    {
+      "source": "npm:@supabase/realtime-js",
+      "target": "npm:@types/phoenix",
+      "type": "static"
+    },
+    {
+      "source": "npm:@supabase/realtime-js",
+      "target": "npm:ws@8.16.0",
+      "type": "static"
+    },
+    {
+      "source": "npm:@supabase/storage-js",
+      "target": "npm:@supabase/node-fetch",
+      "type": "static"
+    },
+    {
+      "source": "npm:@supabase/supabase-js",
+      "target": "npm:@supabase/functions-js",
+      "type": "static"
+    },
+    {
+      "source": "npm:@supabase/supabase-js",
+      "target": "npm:@supabase/gotrue-js",
+      "type": "static"
+    },
+    {
+      "source": "npm:@supabase/supabase-js",
+      "target": "npm:@supabase/node-fetch",
+      "type": "static"
+    },
+    {
+      "source": "npm:@supabase/supabase-js",
+      "target": "npm:@supabase/postgrest-js",
+      "type": "static"
+    },
+    {
+      "source": "npm:@supabase/supabase-js",
+      "target": "npm:@supabase/realtime-js",
+      "type": "static"
+    },
+    {
+      "source": "npm:@supabase/supabase-js",
+      "target": "npm:@supabase/storage-js",
+      "type": "static"
+    },
+    {
       "source": "npm:@tufjs/models",
       "target": "npm:@tufjs/canonical-json",
       "type": "static"
@@ -15480,7 +15649,7 @@
     },
     {
       "source": "npm:@typescript-eslint/typescript-estree",
-      "target": "npm:globby",
+      "target": "npm:globby@11.1.0",
       "type": "static"
     },
     {
@@ -17060,7 +17229,7 @@
     },
     {
       "source": "npm:copy-webpack-plugin",
-      "target": "npm:globby@13.2.2",
+      "target": "npm:globby",
       "type": "static"
     },
     {
@@ -18954,8 +19123,33 @@
       "type": "static"
     },
     {
-      "source": "npm:globby",
+      "source": "npm:globby@11.1.0",
       "target": "npm:array-union",
+      "type": "static"
+    },
+    {
+      "source": "npm:globby@11.1.0",
+      "target": "npm:dir-glob",
+      "type": "static"
+    },
+    {
+      "source": "npm:globby@11.1.0",
+      "target": "npm:fast-glob",
+      "type": "static"
+    },
+    {
+      "source": "npm:globby@11.1.0",
+      "target": "npm:ignore",
+      "type": "static"
+    },
+    {
+      "source": "npm:globby@11.1.0",
+      "target": "npm:merge2",
+      "type": "static"
+    },
+    {
+      "source": "npm:globby@11.1.0",
+      "target": "npm:slash@3.0.0",
       "type": "static"
     },
     {
@@ -18981,31 +19175,6 @@
     {
       "source": "npm:globby",
       "target": "npm:slash",
-      "type": "static"
-    },
-    {
-      "source": "npm:globby@13.2.2",
-      "target": "npm:dir-glob",
-      "type": "static"
-    },
-    {
-      "source": "npm:globby@13.2.2",
-      "target": "npm:fast-glob",
-      "type": "static"
-    },
-    {
-      "source": "npm:globby@13.2.2",
-      "target": "npm:ignore",
-      "type": "static"
-    },
-    {
-      "source": "npm:globby@13.2.2",
-      "target": "npm:merge2",
-      "type": "static"
-    },
-    {
-      "source": "npm:globby@13.2.2",
-      "target": "npm:slash@4.0.0",
       "type": "static"
     },
     {
@@ -22310,17 +22479,17 @@
     },
     {
       "source": "npm:strip-ansi-cjs",
-      "target": "npm:ansi-regex@5.0.1",
+      "target": "npm:ansi-regex",
       "type": "static"
     },
     {
       "source": "npm:strip-ansi",
-      "target": "npm:ansi-regex@5.0.1",
+      "target": "npm:ansi-regex",
       "type": "static"
     },
     {
       "source": "npm:strip-ansi",
-      "target": "npm:ansi-regex@5.0.1",
+      "target": "npm:ansi-regex",
       "type": "static"
     },
     {
@@ -23216,6 +23385,16 @@
     {
       "source": "npm:websocket-driver",
       "target": "npm:websocket-extensions",
+      "type": "static"
+    },
+    {
+      "source": "npm:whatwg-url",
+      "target": "npm:tr46",
+      "type": "static"
+    },
+    {
+      "source": "npm:whatwg-url",
+      "target": "npm:webidl-conversions",
       "type": "static"
     },
     {
